@@ -15,12 +15,12 @@ debug.sf.disable_client_composition_cache=0
 debug.sf.enable_gl_backpressure=0
 debug.sf.frame_rate_multiple_threshold=120
 debug.sf.latch_unsignaled=0
+debug.sf.enable_adpf_cpu_hint=true
 vendor.perf.framepacing.enable=1
 
 
 #HWUI
 ro.hwui.render_ahead=5
-debug.sf.enable_adpf_cpu_hint=true
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
 
@@ -54,4 +54,9 @@ TARGET_DISABLE_MATLOG := true
 ```make
 #Animation override
 persist.sys.activity_anim_perf_override=true
+```
+
+**DISABLE RBE**
+```make
+USE_RBE=false mka bacon
 ```
