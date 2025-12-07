@@ -56,6 +56,22 @@ TARGET_DISABLE_MATLOG := true
 persist.sys.activity_anim_perf_override=true
 ```
 
+## OTHER
+**environment setup:**
+```make
+. build/envsetup.sh
+```
+
+**initialize the repo:**
+```make
+--depth 1 --no-repo-verify -g default,-mips,-darwin,-notdefault
+```
+
+**sync repo:**
+```make
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
+```
+
 **DISABLE RBE**
 ```make
 USE_RBE=false mka bacon
