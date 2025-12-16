@@ -4,9 +4,10 @@
 3. [MIUI Camera Marble](https://github.com/Chaitanyakm/device_xiaomi_marble/commit/f873761bbb3167a3ff9e4235fd29949f0ab97d9e)
 4. [MIUI Camera Garnet](https://github.com/Evolution-X-Devices/device_xiaomi_garnet/commit/8727e2b04e007876604d6e44b22acf8d37e3cd79)
 5. [AOSP Surfaceflinger](https://github.com/Evolution-X-Devices/device_xiaomi_garnet/commit/f4a5a26fd2c9b10a852c07968929a4f704a8c464)
-6. [KSU Next Installation](https://kernelsu-next.github.io/webpage/pages/installation.html)
-7. [FW Navigation Bar](https://github.com/crdroidandroid/android_frameworks_base/commit/b72c91dfd8142632763a8058e8f05b3d6377b2fa)
-8. [Settings Navigation Bar](https://github.com/crdroidandroid/android_packages_apps_Settings/commit/94a94f250789ce3189a046bc838837fb31c2bca1)
+6. [Refresh Rate Switch](https://github.com/kleidione/device_xiaomi_garnet/commit/f8edcab091f9d4d1cfca518678845ef376017d40)
+7. [KSU Next Installation](https://kernelsu-next.github.io/webpage/pages/installation.html)
+8. [FW Navigation Bar](https://github.com/crdroidandroid/android_frameworks_base/commit/b72c91dfd8142632763a8058e8f05b3d6377b2fa)
+9. [Settings Navigation Bar](https://github.com/crdroidandroid/android_packages_apps_Settings/commit/94a94f250789ce3189a046bc838837fb31c2bca1)
 
 
 ## VENDOR PROP CHANGES(REPLACE/ADD/REMOVE)
@@ -19,7 +20,7 @@ debug.sf.enable_adpf_cpu_hint=true
 vendor.perf.framepacing.enable=1
 
 
-#HWUI
+# hwui
 ro.hwui.render_ahead=5
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
@@ -31,7 +32,12 @@ vendor.display.override_doze_mode=1
 
 ## SIGN KEYS
 ```make
-https://github.com/ProjectMatrixx/android_vendor_lineage-priv_keys-template.git
+Matrixx - https://github.com/ProjectMatrixx/android_vendor_lineage-priv_keys-template.git
+CrDroid - https://github.com/306bobby-android/crDroid-build-signed-script.git
+
+# Sign Keys (device.mk)
+-include vendor/lineage-priv/keys/keys.mk
+
 ```
 
 ## CHANGE DISPLAY DENSITY
@@ -52,7 +58,7 @@ TARGET_DISABLE_MATLOG := true
 
 ## SYSTEM PROP CHANGES(REPLACE/ADD/REMOVE)
 ```make
-#Animation override
+# Animation override
 persist.sys.activity_anim_perf_override=true
 ```
 
